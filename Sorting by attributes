@@ -1,0 +1,11 @@
+movies = [ #I'm having a Sam Neil appreciation week
+   {"title": "Jurassic Park", "rating": 8.2, "year": 1993},
+   {"title": "The Hunt for Red October", "rating": 7.5, "year": 1990},
+   {"title": "Event Horizon", "rating": 6.6, "year": 1997},
+   {"title": "In the Mouth of Madness", "rating": 7.1, "year": 1994},
+]
+movies_by_year_then_rating = sorted(
+   movies,
+   key=lambda m: (m["year"], -m["rating"])
+)
+print(movies_by_year_then_rating)
