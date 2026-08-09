@@ -1,0 +1,18 @@
+def insertion_sort(greta):
+   # greta is my dog's name and I love her so, her name is the array
+   for i in range(1, len(greta)):
+       key = greta[i]          # since I can make that variable whatever I want
+       j = i - 1            
+
+
+       while j >= 0 and greta[j] > key:
+           greta[j + 1] = greta[j]
+           j -= 1
+
+
+       greta[j + 1] = key
+
+
+nums = [7, 3, 5, 2]
+insertion_sort(nums)
+print(nums)  
