@@ -1,0 +1,14 @@
+# Class definition
+class Pet:
+   pass
+
+
+# Instantiation (object creation)
+shrimp = Pet() #The name of the cat I rescued last Friday
+
+
+print(type(shrimp))
+
+
+shrimp.name = "Shrimp"
+print(shrimp.name)
