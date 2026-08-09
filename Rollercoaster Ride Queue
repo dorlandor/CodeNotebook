@@ -1,0 +1,27 @@
+from collections import deque
+
+
+ride_line = deque()
+
+
+ride_line.append({"name": "Alice", "souvenirs": ["hat", "shirt"]})
+ride_line.append({"name": "Bart", "souvenirs": ["skateboard"]})
+ride_line.append({"name": "Lisa", "souvenirs": ["shirt"]})
+
+
+print(ride_line)
+
+
+if ride_line:
+   current_guest = ride_line.popleft()
+   print("Now riding:", current_guest["name"])
+
+
+current_guest["souvenirs"].append("photo")
+print("After buying photo:", current_guest)
+
+
+if current_guest["souvenirs"]:
+   dropped = current_guest["souvenirs"].pop()
+   print("Dropped souvenir:", dropped)
+   print("Souvenirs now:", current_guest["souvenirs"])
