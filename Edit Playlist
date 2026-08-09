@@ -1,0 +1,7 @@
+def edit_playlist(playlist):
+   current = playlist[2]
+   playlist[0] = "Favorite"
+   removed = playlist.pop()
+   return playlist, current, removed
+songs = ["Intro", "Verse", "Solo", "Outro"]
+print(edit_playlist(songs))
