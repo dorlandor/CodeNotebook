@@ -1,0 +1,14 @@
+def linear_search(items, target):
+   for item in items:
+       if item == target:
+           return True
+   return False
+
+
+backpack = ["sword", "potion", "shield", "bow"]
+
+
+print(linear_search(backpack, "potion"))
+print(linear_search(backpack, "axe"))
+print(linear_search(backpack, "staff"))
+print(linear_search(backpack, "helmet"))
