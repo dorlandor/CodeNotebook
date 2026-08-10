@@ -1,0 +1,18 @@
+class Pet: #Class Pet declared
+   pass
+
+
+greta = Pet() #Object Instantiation
+shrimpy = Pet()
+
+
+greta.name = "Greta" #Adding attributes to objects
+greta.age = "4 Years"
+
+
+shrimpy.name = "Shrimpy"
+shrimpy.age = "10 Weeks"
+
+
+print(greta.name, greta.age) #Print results
+print(shrimpy.name, shrimpy.age)
