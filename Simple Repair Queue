@@ -1,0 +1,35 @@
+class Device:
+    pass
+
+class Technician:
+    def repair_device(self):
+        # change the device's status
+        self.device.status = "fixed"
+        print(self.name, "repaired", self.device.name)
+
+# create devices
+laptop = Device()
+laptop.name = "Work Laptop"
+laptop.status = "broken"
+
+phone = Device()
+phone.name = "Work Phone"
+phone.status = "broken"
+
+# create one technician
+tech = Technician()
+tech.name = "Ryan"
+
+# connect the technician to the device
+tech.device = laptop
+
+# call the method
+tech.repair_device()
+
+# check the device status
+print("Device status is now:", laptop.status)
+
+# point tech to the phone now
+tech.device = phone
+tech.repair_device()
+print("Phone status is now:", phone.status)
