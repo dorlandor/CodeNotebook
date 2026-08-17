@@ -1,0 +1,39 @@
+class Device:
+    def __init__(self, name, battery):
+        self.name = name
+        self.battery = battery
+
+    def charge(self, amount):
+        self.battery += amount
+
+    def report(self):
+        # return a string describing this device
+        return f"{self.name}: {self.battery}%"
+
+# --- main program ---
+devices = [
+    Device("Phone", 50),
+    Device("Tablet", 90),
+    Device("Laptop", 80)
+]
+
+# 1) change state
+for device in devices:
+    device.charge(10)
+
+# 2) program-level result: count fully charged ones
+fully_charged_count = 0          # accumulator starts at 0
+
+for device in devices:
+    if device.battery >= 100:
+        fully_charged_count += 1
+
+reports = []
+
+for device in devices:
+    message = device.report()
+    reports.append(message)
+
+print(reports)
+
+print("Fully charged devices:", fully_charged_count)
