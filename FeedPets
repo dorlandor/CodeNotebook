@@ -1,0 +1,30 @@
+class Pet:
+  
+   def __init__(self, name, energy):
+       self.name = name
+       self.energy = energy
+
+   def eat(self, amount):
+       self.energy = self.energy + amount
+
+class PetOwner:
+
+   def __init__(self, name):
+       self.name = name
+       self.pets =[]
+  
+   def feed_one_pet(self, pet, amount):
+       pet.eat(amount)
+
+owner = PetOwner("Alex")
+
+dog = Pet("Rex", 5)
+cat = Pet("Misty", 3)
+
+owner.pets.append(dog)
+owner.pets.append(cat)
+
+print(dog.energy)
+owner.feed_one_pet(dog, 3)
+print("After feeding")
+print(dog.energy)
