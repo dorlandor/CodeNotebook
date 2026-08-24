@@ -1,0 +1,28 @@
+class Speaker:
+    def __init__(self, volume):
+        self._volume = volume
+
+    def get_volume(self):
+        """Return the current volume level (0–100)."""
+        return self._volume
+
+    def set_volume(self, new_volume):
+        """
+        Set volume, but always keep it between 0 and 100.
+        Values below 0 become 0, above 100 become 100.
+        """
+        if new_volume < 0:
+            self._volume = 0
+        elif new_volume > 100:
+            self._volume = 100
+        else:
+            self._volume = new_volume
+
+# -- Main Program --
+
+speaker = Speaker(80)
+speaker.set_volume(-5)
+print(speaker.get_volume())
+
+speaker.set_volume(150)
+print(speaker.get_volume())
